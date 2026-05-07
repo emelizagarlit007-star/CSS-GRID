@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Foods</title>
+    <style>
+        /* Basic Page Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #fff3e0;
+            line-height: 1.6;
+            color: #5d4037;
+        }
+
+        /* Header Style */
+        .header {
+            background-color: #ff8c00;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .header h1 {
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+        }
+
+        /* Main Grid Container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Style for all sections */
+        section, aside {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* ------------------------------
+        Requirements: Elements spanning all columns
+        ------------------------------ */
+        .intro {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: #fff8e1;
+            border-left: 6px solid #ff8c00;
+        }
+
+        .gallery {
+            grid-column: 1 / -1;
+            background-color: #fbe9e7;
+        }
+
+        /* ------------------------------
+        Content Layout
+        ------------------------------ */
+        .info-card {
+            background-color: #fff3e0;
+        }
+
+        .sidebar {
+            background-color: #fff8e1;
+        }
+
+        .sidebar ul {
+            list-style-position: inside;
+            margin-top: 15px;
+        }
+
+        .sidebar li {
+            margin: 8px 0;
+        }
+
+        /* Style for Images */
+        .food-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 12px 0;
+        }
+
+        /* Gallery Grid inside the section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            background-color: white;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #ffccbc;
+        }
+
+        .gallery-item h4 {
+            color: #e65100;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Style */
+        .footer {
+            background-color: #bf360c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .intro, .gallery {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>🍽️ My Favorite Foods</h1>
+        <p>Discover the delicious foods that I love the most!</p>
+    </header>
+
+    <!-- Main Content Container - Using CSS Grid -->
+    <main class="grid-container">
+
+        <!-- Introduction Section - Spans all columns -->
+        <section class="intro">
+            <h2>About My Favorite Foods</h2>
+            <p>Food is one of the best things in life! It makes us happy, full, and energized. Everyone has their own list of favorite foods, and here are mine. In this page, I will share the top 5 foods that I really love to eat: <strong>Adobo, Nuggets, Mango Grahams, Tapioca, and Salad</strong>. These foods are simply delicious and I never get tired of eating them!</p>
+        </section>
+
+        <!-- Information Card 1 -->
+        <section class="info-card">
+            <h3> Adobo</h3>
+            <img src="https://images.unsplash.com/photo-1604909052743-94e838986d24?w=500&h=300&fit=crop" alt="Adobo" class="food-img">
+            <p>Adobo is a classic Filipino dish that is truly delicious! It is made by cooking meat (usually chicken or pork) in soy sauce, vinegar, garlic, and spices. It has a savory and slightly tangy taste that goes perfectly well with hot rice.</p>
+        </section>
+
+        <!-- Information Card 2 -->
+        <section class="info-card">
+            <h3> Nuggets</h3>
+            <img src="https://images.unsplash.com/photo-1562967914-326694061482?w=500&h=300&fit=crop" alt="Chicken Nuggets" class="food-img">
+            <p>Who doesn't love nuggets? They are crispy on the outside and juicy inside! Usually made from chicken, they are perfect as a snack or a main meal. They taste great especially when dipped in ketchup, barbecue sauce, or mayonnaise.</p>
+        </section>
+
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <h3>🍴 My Top 5 List</h3>
+            <img src="https://images.unsplash.com/photo-1504674900224-190dedc4a326?w=400&h=250&fit=crop" alt="Delicious Food" class="food-img">
+            <ul>
+                <li>Adobo</li>
+                <li>Nuggets</li>
+                <li>Mango Grahams</li>
+                <li>Tapioca</li>
+                <li>Salad</li>
+            </ul>
+            <p>These are the foods that always make me happy and full!</p>
+        </aside>
+
+        <!-- Gallery Section - Spans all columns -->
+        <section class="gallery">
+            <h2>More About My Favorites</h2>
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <h4> Mango Grahams</h4>
+                    <img src="https://images.unsplash.com/photo-1571877227200-0f91f4a88e79?w=400&h=300&fit=crop" alt="Mango Grahams" class="food-img">
+                    <p>A very delicious dessert made with layers of graham crackers, cream, and sweet ripe mangoes. It's cold, creamy, and tastes like heaven!</p>
+                </div>
+
+                <div class="gallery-item">
+                    <h4> Tapioca</h4>
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=400&h=300&fit=crop" alt="Tapioca" class="food-img">
+                    <p>A sweet and chewy snack or drink! It is made from cassava starch balls mixed with milk, sugar, and sometimes flavored with tea or fruits. Very fun to eat!</p>
+                </div>
+
+                <div class="gallery-item">
+                    <h4> Salad</h4>
+                    <img src="https://images.unsplash.com/photo-1540189549326-45cf294681ff?w=400&h=300&fit=crop" alt="Salad" class="food-img">
+                    <p>Whether it's a vegetable salad or a creamy fruit salad, it's always healthy and yummy! It is fresh, colorful, and good for the body.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 My Favorite Foods by Melz | Enjoy Eating!</p>
+    </footer>
+
+</body>
+</html>
